@@ -1,5 +1,4 @@
 .App {
-    background: #f5c000;
     margin: 0;
 }
 
@@ -13,19 +12,26 @@
     border-radius: 25px;
 }
 
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+}
+
 .pizza {
     color: silver;
-    background: #f5c000;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    flex-direction: column;
+    width: 50%;
 }
 
 .pizza1 {
     background-color: rgb(241, 237, 237);
-    height: 25%;
-    width: 15%;
+    /* height: 25%;
+    width: 15%; */
     box-shadow: 0px 2px 8px 0px rgba(39, 10, 141, 0.5), 0px 4px 16px 0px rgba(7, 71, 190, 0.5);
     text-align: center;
     border-radius: 20px;
@@ -39,8 +45,86 @@
     cursor: pointer;
 }
 
-.head {
+
+/* new style to accomodate cart */
+
+.d {
     display: flex;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 0px 150px;
+}
+
+.d h1 {
+    padding: 5px 30px;
+}
+
+.d button {
+    outline: none;
+    border: none;
+    color: #fff;
+    background: #333;
+    padding: 5px 10px;
+    font-size: 23px;
+    border-radius: 5px;
+    z-index: 4;
+}
+
+.d button:hover {
+    cursor: pointer;
+}
+
+
+/* cart */
+
+.cart-cont {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(39, 10, 141, 0.5), 0px 4px 16px 0px rgba(7, 71, 190, 0.5);
+    transition: all 0.3s ease-in-out;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cart-list {
+    height: 80%;
+    width: 90%;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cart-cont h1 {
+    text-align: left;
+}
+
+.cart {
+    background-color: rgb(241, 237, 237);
+    height: 25%;
+    width: 80%;
+    box-shadow: 0px 2px 8px 0px rgba(39, 10, 141, 0.5), 0px 4px 16px 0px rgba(7, 71, 190, 0.5);
+    text-align: center;
+    border-radius: 20px;
+    margin: 1%;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.input {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10%;
+    width: 150%;
+}
+
+.p {
+    color: silver;
 }
